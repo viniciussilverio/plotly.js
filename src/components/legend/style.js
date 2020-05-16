@@ -358,7 +358,7 @@ module.exports = function style(s, gd) {
             .selectAll('path.legendpie')
             .data(Registry.traceIs(trace, 'pie') && trace.visible ? [d] : []);
         pts.enter().append('path').classed('legendpie', true)
-            .attr('d', 'M6,6H-6V-6H6Z')
+            .attr('d', 'M6,0A6,6 0 1,1 0,-6A6,6 0 0,1 6,0Z')
             .attr('transform', 'translate(20,0)');
         pts.exit().remove();
 
